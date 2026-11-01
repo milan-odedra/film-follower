@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Film Follower</title>
+</head>
+<body>
+  <header>
+    <h1>Film Follower</h1>
+    <p>Discover movies and showtimes near you</p>
+  </header>
+
+  <main>
+    <!-- Search Section Landmark -->
+    <section aria-labelledby="search-heading">
+      <h2 id="search-heading">Find Showtimes</h2>
+
+      <form role="search" id="cinema-search-form">
+        <!-- Location input with explicit label association -->
+        <div class="form-group">
+          <label for="location-input">Location or Postcode</label>
+          <input
+            type="search"
+            id="location-input"
+            name="location"
+            placeholder="e.g. Manchester or M1 1AD"
+            autocomplete="postal-code"
+            required
+          />
+        </div>
+
+        <!-- Radius dropdown with sensible defaults -->
+        <div class="form-group">
+          <label for="radius-select">Distance Radius</label>
+          <select id="radius-select" name="radius">
+            <option value="5">5 miles</option>
+            <option value="10" selected>10 miles</option>
+            <option value="25">25 miles</option>
+            <option value="50">50 miles</option>
+          </select>
+        </div>
+
+        <!-- Accessible submit trigger -->
+        <button type="submit" id="search-btn">Search Cinemas</button>
+      </form>
+    </section>
+
+    <!-- Results Section Scaffolding -->
+    <section aria-labelledby="results-heading">
+      <h2 id="results-heading">Nearby Cinemas</h2>
+
+      <!-- Dynamic container populated by JS in future milestones -->
+      <div id="results-container" aria-live="polite">
+        <p class="empty-state">
+          Enter a location above and search to discover cinemas and showtimes near you.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Film Follower</p>
+  </footer>
+</body>
+</html>
